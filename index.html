@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <title>Post Office Application</title>
+  </head>
+  <body onload="getIP()">
+    <div class="main">
+      <div class="left">
+        <h1 id="title">Post Office Application</h1>
+        <p id="desc">
+          This Application Allows you to extract information about the nearest
+          Post Offices, based on your location.
+        </p>
+        <img src="image.svg" alt="logo" id="logo" />
+      </div>
+      <div class="right">
+        <h1 id="right-title">Your Current IP Address is: wait.....</h1>
+        <button id="btn">Get Started</button>
+      </div>
+    </div>
+
+    <div class="result-Section">
+      <nav>
+        <h1 id="heading" class="side-heading"></h1>
+      </nav>
+      <div id="info"></div>
+      <div id="map">
+        <h1 id="map-heading" class="side-heading">Your location Details</h1>
+        <div id="map-container"></div>
+      </div>
+      <div id="about"></div>
+      <div id="offices">
+        <h1 id="offices-heading">Post Offices Near You</h1>
+        <div class="search">
+          <input
+            type="text"
+            name=""
+            id="search"
+            placeholder="Search By Name..."
+          />
+        </div>
+        <div class="items"></div>
+      </div>
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>
