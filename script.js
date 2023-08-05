@@ -3,8 +3,6 @@ async function getIP() {
   let reqIPrsponse = await fetch("https://api.ipify.org/?format=json");
   let ipAddress = await reqIPrsponse.json();
 
-  ipAddress.ip = "185.80.221.85";
-
   setIpOnPage(ipAddress.ip);
 
   let ipDetailsResponse = await fetch(
