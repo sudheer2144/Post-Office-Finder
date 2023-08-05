@@ -15,8 +15,11 @@ async function getIP() {
   );
   let officeList = await officeListResponse.json();
 
+  console.log(officeListResponse);
+  console.log(officeList);
+
   //Error Handling if any of the fetch gives proper response alert and reloading the page.
-  if (ipDetailsResponse.ok && officeList[0].Status != 404) {
+  if (ipDetailsResponse.ok && officeList[0].Status == "Success") {
     setButtonFunctionToChangeUI(ipDetails, officeList);
   } else {
     alert("Can't find required details of your IP.");
