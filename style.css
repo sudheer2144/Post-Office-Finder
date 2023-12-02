@@ -12,6 +12,7 @@
 .main {
     display: flex;
     /* display: none; */
+    height: 100vh;
 }
 
 .left {
@@ -35,7 +36,7 @@
 #desc {
     align-self: flex-start;
     font-size: 1.5rem;
-    width: 70%;
+    width: 90%;
 }
 
 #logo {
@@ -212,4 +213,19 @@ iframe {
 
 .item h1 {
     font-size: 2rem;
+}
+
+
+@media (max-width : 1080px) {
+
+    .main {
+        flex-flow: column;
+    }
+
+    #logo {
+        width: 100%;
+        height: auto;
+        margin-top: 0;
+    }
+
 }
