@@ -17,7 +17,11 @@ async function getIP() {
 
   //Error Handling if any of the fetch gives proper response alert and reloading the page.
   if (ipDetailsResponse.ok && officeList[0].Status == "Success") {
-    setButtonFunctionToChangeUI(ipDetails, officeList);
+    addINFOtoUI(ipDetails);
+    addMapFrameToUI(ipDetails);
+    addMoreInfotoUI(ipDetails, officeList[0]);
+    addOfficeList(officeList[0]);
+    setButtonFunctionToChangeUI();
   } else {
     alert("Can't find required details of your IP.");
     location.reload();
@@ -34,14 +38,9 @@ function setIpOnPage(ipAddress) {
 }
 
 //onclick event of button
-function setButtonFunctionToChangeUI(ipDetails, officeList) {
+function setButtonFunctionToChangeUI() {
   let btn = document.getElementById("btn");
   btn.addEventListener("click", () => {
-    addINFOtoUI(ipDetails);
-    addMapFrameToUI(ipDetails);
-    addMoreInfotoUI(ipDetails, officeList[0]);
-    addOfficeList(officeList[0]);
-
     document.querySelector(".main").style.display = "none";
 
     document.querySelector(".result-Section").style.display = "block";
